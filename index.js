@@ -5,13 +5,14 @@ require('dotenv').config();
 const Web3 = require('web3')
 const rpcURL = 'https://mainnet.infura.io/v3/' + process.env.INFURA_ID
 const web3 = new Web3(rpcURL)
+const initBlock = 12965000
 
 this.previousBlock = '0'
 this.totalWeiBurned = 0
 
 setInterval(() => {
   // get latest block
-  web3.eth.getBlock('latest').then((block) => {
+  web3.eth.getBlock(initBlock).then((block) => {
     if(block.number.toString() > this.previousBlock.toString()) {
       const gasUsedWei = block.gasUsed.toString()
       const baseFeeWei = web3.utils.hexToNumberString(block.baseFeePerGas)

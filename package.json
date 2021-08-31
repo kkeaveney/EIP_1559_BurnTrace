@@ -1,12 +1,12 @@
 {
-  "name": "eip-1559-examples",
+  "name": "eip-1559_BurnTrace",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "gregory@dappuniversity.com",
+  "author": "kevinkeaveney",
   "license": "ISC",
   "dependencies": {
     "dotenv": "^10.0.0",
